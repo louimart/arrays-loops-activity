@@ -109,9 +109,15 @@ console.log(toggled);
  *
  * Hint: Try using a while loop for this one.
  */
-let numberArray = [1, 5, 3, 0, 7, 0, 0, 0]
+let numberArray = [ 1, 5, 3, 0, 7, 0, 0, 0 ];
 let y = numberArray.length - 1
-
+console.log(`Before Loop ${numberArray}`);
+while ( numberArray[y] === 0 ) {
+     numberArray.pop();
+     // console.log(numberArray);
+     y--;
+}
+console.log(`After Loop: ${numberArray}`);
 
 // Example output
 // Before loop 3, 0, 2, 8, 0, 0, 0
@@ -127,6 +133,23 @@ let y = numberArray.length - 1
       and lowest numbers.
  * 3. Log the highest and lowest number to the console
  */
+let listNumbers = [ -87, 33, 28, -3, 39, 51, -73, -89, -18, -59, 15, 34, 64, -92, 80, -57, -100, 88, 47, -30, 1, 71, -65, -69, -32, 6, -68 ];
+let high = 0;
+let low = 0;
+// console.log(listNumbers);
+console.log(`Initial High: ${high}`);
+console.log(`Initial Low: ${low}`);
+for (let x of listNumbers){
+     console.log(x);
+     if (x>=high){
+          high = x;
+     } else if (x<=low){
+          low = x;
+     }
+}
+console.log(listNumbers);
+console.log(`Final High: ${high}`);
+console.log(`Final Low: ${low}`);
 
 
 // Example output
